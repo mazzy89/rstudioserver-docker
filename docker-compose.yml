@@ -1,0 +1,6 @@
+rstudio:
+  build: .
+  ports:
+    - "8787:8787"
+nginx:
+  image: nginx
