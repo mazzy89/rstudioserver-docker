@@ -22,11 +22,9 @@ RUN echo 'server-daemonize=0' > /etc/rstudio/rserver.conf
 
 # Define default 'rstudio' user and add it to the
 # rstudio-server group created during rstudio inst
-RUN useradd -g rstudio-server rstudio && \
-    echo "rstudio:rstudio" | chpasswd \
-    adduser rstudio sudo
+RUN useradd -r -g rstudio-server rstudio && \
+    echo "rstudio:rstudio" | chpasswd
 
 EXPOSE 8787
 
-USER rstudio
 ENTRYPOINT ["/usr/lib/rstudio-server/bin/rserver"]
