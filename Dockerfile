@@ -1,5 +1,5 @@
 FROM r-base
-MAINTAINER mazzy
+MAINTAINER mazzy <apocalipse89@gmail.com>
 
 # Install RStudioServer
 RUN apt-get install -y gdebi-core \
