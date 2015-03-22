@@ -28,4 +28,5 @@ RUN useradd -g rstudio-server rstudio && \
 
 EXPOSE 8787
 
+USER rstudio
 ENTRYPOINT ["/usr/lib/rstudio-server/bin/rserver"]
