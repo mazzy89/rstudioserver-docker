@@ -19,11 +19,6 @@ RUN useradd -g rstudio-server \
             rstudio && \
     echo "rstudio:rstudio" | chpasswd
 
-# RUN usermod -l rstudio docker \
-#     && usermod -m -d /home/rstudio rstudio \
-#     && groupmod -n rstudio docker \
-#     && echo "rstudio:rstudio" | chpasswd
-
 EXPOSE 8787
 
 ENTRYPOINT ["/usr/lib/rstudio-server/bin/rserver"]
