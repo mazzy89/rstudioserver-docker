@@ -3,7 +3,7 @@ FROM r-base:latest
 MAINTAINER mazzy <apocalipse89@gmail.com>
 
 RUN apt-get -y -qq update \
-    && wget -q http://ftp.us.debian.org/debian/pool/main/o/openssl/libssl0.9.8_0.9.8o-4squeeze14_amd64.deb && \
+    && wget -q http://ftp.us.debian.org/debian/pool/main/o/openssl/libssl0.9.8_0.9.8o-4squeeze14_amd64.deb \
     && dpkg -i libssl0.9.8_0.9.8o-4squeeze14_amd64.deb && rm libssl0.9.8_0.9.8o-4squeeze14_amd64.deb \
     && apt-get install -y -qq sudo gdebi-core \
     && wget -q http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb \
