@@ -16,7 +16,7 @@ RUN gdebi -n rstudio-server-0.98.1103-amd64.deb
 
 RUN rm libssl0.9.8_0.9.8o-4squeeze14_amd64.deb rstudio-server-0.98.1103-amd64.deb
 
-# Define 'rstudio' server and add it to the
+# Define 'rstudio' user and add it to the
 # rstudio-server group created during rstudio inst
 RUN useradd -g rstudio-server rstudio && \
     echo "rstudio:rstudio" | chpasswd \
