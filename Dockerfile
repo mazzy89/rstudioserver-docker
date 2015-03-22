@@ -7,7 +7,7 @@ RUN apt-get -y -qq update \
     && dpkg -i libssl0.9.8_0.9.8o-4squeeze14_amd64.deb && rm libssl0.9.8_0.9.8o-4squeeze14_amd64.deb \
     && apt-get install -y -qq sudo gdebi-core \
     && wget -q http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb \
-    && gdebi -n rstudio-server-0.98.1103-amd64.deb && rstudio-server-0.98.1103-amd64.deb
+    && gdebi -n rstudio-server-0.98.1103-amd64.deb && rm rstudio-server-0.98.1103-amd64.deb
 
 RUN printf 'server-daemonize=0\nwww-address=0.0.0.0\nwww-port=8787\n' > \
     /etc/rstudio/rserver.conf
