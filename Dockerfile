@@ -24,7 +24,8 @@ RUN printf 'server-daemonize=0\nwww-address=0.0.0.0\nwww-port=8787\n' > \
 # Define default 'rstudio' user and add it to the
 # rstudio-server group created during rstudio inst
 RUN useradd -r -g rstudio-server rstudio && \
-    echo "rstudio:rstudio" | chpasswd
+    echo "rstudio:rstudio" | chpasswd && \
+    adduser rstudio sudo
 
 EXPOSE 8787
 
