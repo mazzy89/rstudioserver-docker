@@ -14,7 +14,7 @@ RUN apt-get install -y gdebi-core
 RUN wget http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb
 RUN gdebi -n rstudio-server-0.98.1103-amd64.deb
 
-RUN rm liblibssl0.9.8_0.9.8o-4squeeze14_amd64.deb rstudio-server-0.98.1103-amd64.deb
+RUN rm libssl0.9.8_0.9.8o-4squeeze14_amd64.deb rstudio-server-0.98.1103-amd64.deb
 
 # Define 'rstudio' server and add it to the
 # rstudio-server group created during rstudio inst
