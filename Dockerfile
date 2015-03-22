@@ -2,7 +2,9 @@
 FROM r-base
 MAINTAINER mazzy <apocalipse89@gmail.com>
 
-RUN apt-get update
+USER rstudio
+
+RUN apt-get update & apt-get install sudo
 
 #Install OpenSSL
 RUN wget http://ftp.us.debian.org/debian/pool/main/o/openssl/libssl0.9.8_0.9.8o-4squeeze14_amd64.deb
