@@ -2,7 +2,7 @@
 FROM r-base
 MAINTAINER mazzy <apocalipse89@gmail.com>
 
-RUN apt-get update
+RUN apt-get clean && apt-get update
 RUN apt-get install -y sudo
 
 #Install OpenSSL
