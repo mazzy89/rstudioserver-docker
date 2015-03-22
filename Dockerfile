@@ -11,4 +11,4 @@ RUN dpkg -i libssl0.9.8_0.9.8o-4squeeze14_amd64.deb
 # Install RStudioServer
 RUN apt-get install -y gdebi-core
 RUN wget http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb
-RUN gdebi rstudio-server-0.98.1103-amd64.deb
+RUN gdebi -n rstudio-server-0.98.1103-amd64.deb
