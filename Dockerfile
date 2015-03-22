@@ -18,9 +18,8 @@ RUN rm libssl0.9.8_0.9.8o-4squeeze14_amd64.deb \
         rstudio-server-0.98.1103-amd64.deb
 
 # Configure RStudioServer
-RUN printf 'server-daemonize=0\n
-            www-address=0.0.0.0\n
-            www-port=8787' > /etc/rstudio/rserver.conf
+RUN printf 'server-daemonize=0\nwww-address=0.0.0.0\nwww-port=8787' > \
+    /etc/rstudio/rserver.conf
 
 # Define default 'rstudio' user and add it to the
 # rstudio-server group created during rstudio inst
