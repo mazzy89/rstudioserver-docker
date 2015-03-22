@@ -1,11 +1,5 @@
-FROM ubuntu:latest
+FROM r-base
 MAINTAINER mazzy
-
-# Install R
-RUN echo 'deb http://cran.cnr.berkeley.edu/bin/linux/ubuntu trusty/' >> \
-          /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get install --force-yes -y r-base
 
 # Install RStudioServer
 RUN apt-get install -y gdebi-core \
