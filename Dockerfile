@@ -7,5 +7,3 @@ RUN apt-get install -y gdebi-core \
                       wget
 RUN wget http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb
 RUN gdebi rstudio-server-0.98.1103-amd64.deb
-
-EXPOSE 8787
