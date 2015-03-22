@@ -3,7 +3,7 @@ rstudio:
   ports:
     - "8787:8787"
   entrypoint: "/usr/lib/rstudio-server/bin/rserver"
-nginx:
+proxy:
   image: nginx
   volumes:
     -./nginx.conf:/etc/nginx/nginx.conf:ro
