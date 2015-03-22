@@ -28,4 +28,4 @@ RUN useradd -r -g rstudio-server rstudio && \
 
 EXPOSE 8787
 
-ENTRYPOINT ["/usr/lib/rstudio-server/bin/rserver", "--verify-installation 1"]
+ENTRYPOINT ["/usr/lib/rstudio-server/bin/rserver"]
