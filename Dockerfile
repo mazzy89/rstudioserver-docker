@@ -9,7 +9,7 @@ RUN apt-get -y -qq update \
     && wget -q http://download2.rstudio.org/rstudio-server-0.98.1103-amd64.deb \
     && gdebi -n rstudio-server-0.98.1103-amd64.deb && rm rstudio-server-0.98.1103-amd64.deb
 
-RUN printf 'server-daemonize=0\nwww-address=127.0.0.1\nwww-port=8787\n' > \
+RUN echo 'server-daemonize=0' > \
     /etc/rstudio/rserver.conf
 
 # Define default 'rstudio' user and add it to the

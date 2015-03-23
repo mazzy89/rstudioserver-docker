@@ -7,5 +7,7 @@ proxy:
   image: nginx
   ports:
     - "80:80"
+  links:
+    - rstudio
   volumes:
     - ./nginx.conf:/etc/nginx/nginx.conf
